@@ -8,7 +8,7 @@ package com.mycompany.main;
  *
  * @author Admin
  */
-public class Printing {
+public class PrintingProblem {
     public static void main(String args[])
     {
         System.out.print("* \n** \n*** \n****");
