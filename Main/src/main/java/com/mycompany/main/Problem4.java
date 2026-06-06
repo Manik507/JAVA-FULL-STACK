@@ -8,12 +8,14 @@ package com.mycompany.main;
  *
  * @author Admin
  */
-public class Problem3 {
+public class Problem4 {
     public static void main(String args[]) {
-        int n1=10;
-        int n2=20;
-        int n3=30;
-        int avg=(n1+n2+n3)/3;
-        System.out.print("Average = "+avg);
+        //swap 2 numbers without  temporary  variable
+        int num1=10;
+        int num2=20;
+        num1=num1+num2; //30
+        num2=num1-num2; //20
+        num1=num1-num2; //30-10=20
+        System.out.print(num1+" "+num2);
     }
 }
