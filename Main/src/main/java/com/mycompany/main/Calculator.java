@@ -35,7 +35,7 @@ public class Calculator {
         {
             if(n2==0)
             {
-                System.out.print("Cannit divide by zero");
+                System.out.print("Cannot divide by zero");
             }
             else
             {
