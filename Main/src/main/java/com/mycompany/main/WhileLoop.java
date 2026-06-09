@@ -8,13 +8,12 @@ package com.mycompany.main;
  *
  * @author Admin
  */
-public class Problem3 {
-    //Finding average of three numbers
+public class WhileLoop {
     public static void main(String args[]) {
-        int n1=10;
-        int n2=20;
-        int n3=30;
-        int avg=(n1+n2+n3)/3;
-        System.out.print("Average = "+avg);
+        int i=1;
+        while(i<=5)
+        {
+            System.out.println("Hello World");
+        }
     }
 }

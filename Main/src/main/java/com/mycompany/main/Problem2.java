@@ -9,9 +9,9 @@ package com.mycompany.main;
  * @author Admin
  */
 public class Problem2 {
+    //find remainder when one integer is divided by another
     public static void  main(String args[])
     {
-        //find remainder when one integer is divided by another
         int num1=10;
         int num2=3;
         int remainder=num1%num2;

@@ -10,8 +10,9 @@ import java.util.*;
  */
 public class Problem7 {
     public static void main(String args[]) {
+        //Grade System
         Scanner sc=new Scanner(System.in);
-        System.out.print("Enter the marks\n");
+        System.out.print("Enter the marks (Max 50 for each subject)\n");
         System.out.print("Software Testing = ");
         int s=sc.nextInt();
         System.out.print("Machine Learning = ");

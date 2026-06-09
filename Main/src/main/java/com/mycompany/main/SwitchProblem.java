@@ -10,6 +10,7 @@ import java.util.*;
  */
 public class SwitchProblem {
     public static void main(String args[]) {
+        //Parking fee of the vehicle
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter the vehicle type (car,bus,truck) = ");
         String vehicleType=sc.next();

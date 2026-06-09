@@ -8,13 +8,14 @@ package com.mycompany.main;
  *
  * @author Admin
  */
-public class Problem3 {
-    //Finding average of three numbers
+public class ForLoop {
     public static void main(String args[]) {
-        int n1=10;
-        int n2=20;
-        int n3=30;
-        int avg=(n1+n2+n3)/3;
-        System.out.print("Average = "+avg);
+        for(int i=1;i<=3;i++)
+        {
+            for(int j=1;j<=3;j++)
+            {
+                System.out.println(i+" "+j);
+            }
+        }
     }
 }

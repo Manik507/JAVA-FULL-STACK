@@ -10,6 +10,7 @@ import java.util.*;
  */
 public class CheckVowel {
     public static void main(String args[]) {
+        //Whether entered character is vowel  or not
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter an character");
         char ch=sc.next().charAt(0);

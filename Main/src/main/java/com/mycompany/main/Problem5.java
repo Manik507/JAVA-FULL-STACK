@@ -9,6 +9,7 @@ import java.util.*;
  * @author Admin
  */
 public class Problem5 {
+    //Number is Positive or Negative
     public static void main(String args[]) {
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter the number : ");
