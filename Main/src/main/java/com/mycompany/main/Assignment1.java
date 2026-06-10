@@ -8,20 +8,19 @@ import java.util.*;
  *
  * @author Admin
  */
-public class Login {
-    //Login Authentication
+public class Assignment1 {
     public static void main(String args[]) {
-        int originalPassword=1234;
+        //Pattern using for loop
         Scanner sc=new Scanner(System.in);
-        System.out.print("Enter the password : ");
-        int inputPassword=sc.nextInt();
-        if(originalPassword==inputPassword)
+        System.out.print("Enter the number : ");
+        int n=sc.nextInt();
+        for(int i=n;i>=1;i--)
         {
-            System.out.print("Login Successful");
-        }
-        else
-        {
-            System.out.print("Incorrect Password");
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
 }

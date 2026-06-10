@@ -8,20 +8,17 @@ import java.util.*;
  *
  * @author Admin
  */
-public class Login {
-    //Login Authentication
+public class Problem9 {
     public static void main(String args[]) {
-        int originalPassword=1234;
+        //Sum of first n natural numbers
         Scanner sc=new Scanner(System.in);
-        System.out.print("Enter the password : ");
-        int inputPassword=sc.nextInt();
-        if(originalPassword==inputPassword)
+        System.out.print("Enter the number : ");
+        int n=sc.nextInt();
+        int sum=0;
+        for(int i=1;i<=n;i++)
         {
-            System.out.print("Login Successful");
+            sum+=i;
         }
-        else
-        {
-            System.out.print("Incorrect Password");
-        }
+        System.out.print("Sum of first "+n+" natural numbers = "+sum);
     }
 }
