@@ -13,6 +13,8 @@ public class StringExample {
         //1st method to show string
         String name="Manik";
         System.out.println(name);
+        name=name+" Barad"; //appends the old value and points to the new value stored
+        System.out.println("After appending = "+ name); 
         
         //2nd method to show string without storing
         System.out.println("Manik");
