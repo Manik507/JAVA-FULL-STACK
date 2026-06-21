@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.javapractice;
-
+import java.util.*;
 /**
  *
  * @author Admin
@@ -18,19 +18,12 @@ public class ArrayBasics {
         
         //Changing element in array
         age[1]=18;
-        System.out.print("Accessing the second element which is changed = "+age[1]);
+        System.out.println("Accessing the second element which is changed = "+age[1]);
         
         //Traversing the entire array
         for(int i=0;i<3;i++)
         {
             System.out.println(age[i]);
-        }
-        
-        //For each loop
-        System.out.println("For each :- ");
-        for(int i:age)
-        {
-            System.out.print(i);
         }
         
         //Declaring array  with new keyword
@@ -44,6 +37,23 @@ public class ArrayBasics {
         for(int i:arr)
         {
             System.out.println(i); //Remaining elements initialized automatically based on the data type
+        }
+        
+        //Creating an array from user input
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of the array you want to create = ");
+        int size=sc.nextInt();
+        
+        int stud[]=new int[size];
+        
+        System.out.println("Enter the elements :- ");
+        for (int i = 0; i < size; i++) {
+            stud[i]=sc.nextInt();
+        }
+        System.out.println("Entered Values :-");
+        for(int i:stud)
+        {
+            System.out.println(i);
         }
     }
 }
