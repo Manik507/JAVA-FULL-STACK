@@ -1,5 +1,4 @@
-
-import java.util.Scanner;
+package com.mycompany.javapractice;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -10,35 +9,35 @@ import java.util.Scanner;
  *
  * @author Admin
  */
-public class Problem22 {
+import java.util.*;
+public class Problem16 {
     public static void main(String args[]) {
-        //Find index of a given element
+        //Finding the maximum and minimum element in the array
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the size of the array :- ");
         int n=sc.nextInt();
-        
         int arr[]=new int[n];
+        
         System.out.println("Enter the elements of the array :-");
         for(int i=0;i<arr.length;i++)
         {
             arr[i]=sc.nextInt();
         }
         
-        System.out.print("Enter the element you want to find :- ");
-        int element=sc.nextInt();
-        boolean found=false;
-        for(int i=0;i<arr.length;i++)
+        int max=arr[0];
+        int min=arr[0];
+        for(int i=1;i<arr.length;i++)
         {
-            if(element==arr[i])
+            if(arr[i]>max)
             {
-                System.out.println("Element found at index "+i);
-                found=true;
-                break;
+                max=arr[i];
+            }
+            if(arr[i]<min)
+            {
+                min=arr[i];
             }
         }
-        if(found==false)
-        {
-            System.out.println("Element not found in the array");
-        }
+        System.out.println("Maximum Element = "+max);
+        System.out.println("Minimum Element = "+min);
     }
 }

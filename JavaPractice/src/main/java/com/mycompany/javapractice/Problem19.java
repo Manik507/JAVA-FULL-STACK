@@ -1,3 +1,5 @@
+package com.mycompany.javapractice;
+
 
 import java.util.Scanner;
 
@@ -10,36 +12,34 @@ import java.util.Scanner;
  *
  * @author Admin
  */
-public class Problem20 {
+public class Problem19 {
     public static void main(String args[]) {
-        //Finding the second largest element in the array
+        //Reversing the array
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the size of the array :- ");
         int n=sc.nextInt();
-        
         int arr[]=new int[n];
+        int temp;
         System.out.println("Enter the elements of the array :-");
         for(int i=0;i<arr.length;i++)
         {
             arr[i]=sc.nextInt();
         }
-        
-        int max1=Integer.MIN_VALUE;
-        int max2=Integer.MIN_VALUE;
-        for(int i:arr)
+               
+        System.out.println("Reversed Array as follows :-"); //two pointer approach
+        int left=0;
+        int right=arr.length-1;
+        while(left<right)
         {
-            if(i>max1)
-            {
-                max2=max1;
-                max1=i;
-            }
-            else if(i>max2 && i!=max1)  
-            {
-                max2=i;
-            }
+            temp=arr[left];
+            arr[left]=arr[right];
+            arr[right]=temp;
+            left++;
+            right--;
         }
-        
-        
-        System.out.print("Second Largest element in the array = "+max2);
+        for(int val:arr)
+        {
+            System.out.println(val);
+        }
     }
 }

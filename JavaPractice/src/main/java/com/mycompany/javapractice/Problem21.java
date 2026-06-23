@@ -1,3 +1,8 @@
+package com.mycompany.javapractice;
+
+
+import java.util.Scanner;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -7,35 +12,34 @@
  *
  * @author Admin
  */
-import java.util.*;
-public class Problem16 {
+public class Problem21 {
     public static void main(String args[]) {
-        //Finding the maximum and minimum element in the array
+        //Checking if array is sorted in ascending order or not
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the size of the array :- ");
         int n=sc.nextInt();
-        int arr[]=new int[n];
         
+        int arr[]=new int[n];
         System.out.println("Enter the elements of the array :-");
         for(int i=0;i<arr.length;i++)
         {
             arr[i]=sc.nextInt();
         }
-        
-        int max=arr[0];
-        int min=arr[0];
-        for(int i=1;i<arr.length;i++)
+        boolean sorted=true;
+        for(int i=0;i<arr.length-1;i++)
         {
-            if(arr[i]>max)
+            if(arr[i]>arr[i+1])
             {
-                max=arr[i];
-            }
-            if(arr[i]<min)
-            {
-                min=arr[i];
+                sorted=false;
             }
         }
-        System.out.println("Maximum Element = "+max);
-        System.out.println("Minimum Element = "+min);
+        if(sorted==false)
+        {
+            System.out.println("Array is not sorted in ascending order");
+        }
+        else
+        {
+            System.out.println("Array is sorted in ascending order");
+        }
     }
 }

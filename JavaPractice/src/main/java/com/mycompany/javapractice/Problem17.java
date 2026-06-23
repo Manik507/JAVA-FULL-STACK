@@ -1,5 +1,4 @@
-
-import java.util.Scanner;
+package com.mycompany.javapractice;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -10,9 +9,10 @@ import java.util.Scanner;
  *
  * @author Admin
  */
-public class Problem18 {
+import java.util.*;
+public class Problem17 {
     public static void main(String args[]) {
-        //Counting odd and even numbers in an array
+        //Sum  of all elements in the array
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the size of the array :- ");
         int n=sc.nextInt();
@@ -23,20 +23,11 @@ public class Problem18 {
         {
             arr[i]=sc.nextInt();
         }
-        int oddCount=0;
-        int evenCount=0;
+        int sum=0;
         for(int i:arr)
         {
-            if(i%2==0)
-            {
-                evenCount++;
-            }
-            else
-            {
-                oddCount++;
-            }
+            sum+=i;
         }
-        System.out.println("Count of the even numbers = "+evenCount);
-        System.out.println("Count of the odd numbers = "+oddCount);
+        System.out.print("Sum of all the elements in the array is "+sum);
     }
 }

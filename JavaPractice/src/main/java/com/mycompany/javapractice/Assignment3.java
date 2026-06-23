@@ -1,3 +1,5 @@
+package com.mycompany.javapractice;
+
 
 import java.util.Scanner;
 

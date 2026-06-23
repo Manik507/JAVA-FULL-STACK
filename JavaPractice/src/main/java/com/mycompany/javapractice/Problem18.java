@@ -1,3 +1,5 @@
+package com.mycompany.javapractice;
+
 
 import java.util.Scanner;
 
@@ -10,34 +12,33 @@ import java.util.Scanner;
  *
  * @author Admin
  */
-public class Problem19 {
+public class Problem18 {
     public static void main(String args[]) {
-        //Reversing the array
+        //Counting odd and even numbers in an array
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the size of the array :- ");
         int n=sc.nextInt();
         int arr[]=new int[n];
-        int temp;
+        
         System.out.println("Enter the elements of the array :-");
         for(int i=0;i<arr.length;i++)
         {
             arr[i]=sc.nextInt();
         }
-               
-        System.out.println("Reversed Array as follows :-"); //two pointer approach
-        int left=0;
-        int right=arr.length-1;
-        while(left<right)
+        int oddCount=0;
+        int evenCount=0;
+        for(int i:arr)
         {
-            temp=arr[left];
-            arr[left]=arr[right];
-            arr[right]=temp;
-            left++;
-            right--;
+            if(i%2==0)
+            {
+                evenCount++;
+            }
+            else
+            {
+                oddCount++;
+            }
         }
-        for(int val:arr)
-        {
-            System.out.println(val);
-        }
+        System.out.println("Count of the even numbers = "+evenCount);
+        System.out.println("Count of the odd numbers = "+oddCount);
     }
 }

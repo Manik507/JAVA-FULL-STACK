@@ -1,3 +1,5 @@
+package com.mycompany.javapractice;
+
 
 import java.util.Scanner;
 
@@ -10,9 +12,9 @@ import java.util.Scanner;
  *
  * @author Admin
  */
-public class Problem21 {
+public class Problem22 {
     public static void main(String args[]) {
-        //Checking if array is sorted in ascending order or not
+        //Find index of a given element
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the size of the array :- ");
         int n=sc.nextInt();
@@ -23,21 +25,22 @@ public class Problem21 {
         {
             arr[i]=sc.nextInt();
         }
-        boolean sorted=true;
-        for(int i=0;i<arr.length-1;i++)
+        
+        System.out.print("Enter the element you want to find :- ");
+        int element=sc.nextInt();
+        boolean found=false;
+        for(int i=0;i<arr.length;i++)
         {
-            if(arr[i]>arr[i+1])
+            if(element==arr[i])
             {
-                sorted=false;
+                System.out.println("Element found at index "+i);
+                found=true;
+                break;
             }
         }
-        if(sorted==false)
+        if(found==false)
         {
-            System.out.println("Array is not sorted in ascending order");
-        }
-        else
-        {
-            System.out.println("Array is sorted in ascending order");
+            System.out.println("Element not found in the array");
         }
     }
 }
