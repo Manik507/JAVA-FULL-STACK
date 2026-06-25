@@ -90,7 +90,7 @@ interface InterfaceB
 }
 interface C extends InterfaceA, InterfaceB
 {
-    @Override
+
     default void show()
     {
         InterfaceA.super.show();
