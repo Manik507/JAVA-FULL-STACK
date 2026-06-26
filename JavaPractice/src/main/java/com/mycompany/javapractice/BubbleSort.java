@@ -23,11 +23,18 @@ public class BubbleSort {
             arr[i]=sc.nextInt();
         }
         int temp;
-        for(int i=0;i<n-1;i++)   
+        
+        for(int i=0;i<n-1;i++)  
+        {
             // Loop till the second last element because after each pass one element reaches its correct position,
-            //so after (n-1) passes the last element is automatically sorted
-        {    
-            for(int j=0;j<n-1-i;j++)       
+            //so after (n-1) passes the n-1 elements are sorted then remaining element is automatically sorted
+            
+            boolean isSwap=false;  //reset at every iteration
+            
+            //if declared out of the loop and a swap happens it will remain true permanently
+            //to overcome it, it is declared in the outer loop  
+            
+            for(int j=0;j<n-i-1;j++)       
             // Inner loop compares adjacent elements
             // After every pass, the largest element reaches its correct position
             // Therefore, we reduce the number of comparisons by i
@@ -37,7 +44,12 @@ public class BubbleSort {
                     temp=arr[j];
                     arr[j]=arr[j+1];
                     arr[j+1]=temp;
+                    isSwap=true;          //In each iteration at least one swap is done, if it doesnt then the array is already sorted
                 }
+            }
+            if(!isSwap)
+            {
+                break;
             }
         }
         for(int i=0;i<arr.length;i++)
