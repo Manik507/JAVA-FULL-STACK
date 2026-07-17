@@ -15,13 +15,31 @@ public class JFrameExample {
         frame.setLayout(null); //No layout applied
         
         JButton b1=new JButton(new ImageIcon("C:\\Users\\Admin\\Pictures\\Screenshots\\hi.png"));
-        JLabel j1=new JLabel("Created a Button with image");
+        JButton b2=new JButton("Submit");
         
-        b1.setBounds(100,100,200,200); //x,y,w,h
-        j1.setBounds(100,70,200,20);
+        JLabel j1=new JLabel("Enter Gmail - ");
+        JLabel j2=new JLabel("Enter Password - ");
+        JLabel j3=new JLabel("Enter Information About Yourself - ");
         
-        frame.add(b1);
+        JTextField t1=new JTextField();               
+        JPasswordField p1=new JPasswordField(); 
+        JTextArea ta1=new JTextArea();
+      
+        j1.setBounds(50,50,300,30);
+        t1.setBounds(50,75,200,30);
+        j2.setBounds(50,100,300,30);
+        p1.setBounds(50,125,200,30);
+        j3.setBounds(50,150,300,30);
+        ta1.setBounds(50,175,400,40);
+        b2.setBounds(50,220,100,30);
+        
         frame.add(j1);
+        frame.add(t1);
+        frame.add(j2);
+        frame.add(p1);
+        frame.add(j3);
+        frame.add(ta1);
+        frame.add(b2);
         
         frame.setVisible(true); //Can be viewed
     }
